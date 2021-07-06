@@ -9,6 +9,10 @@ module.exports = {
     'storybook-dark-mode'
   ],
   "core": {
-    "builder": "storybook-builder-vite"
-  }
+    "builder": "storybook-builder-vite",
+  },
+  async viteFinal(config, { configType }) {
+    config.base = '/snowind-stories/';
+    return config;
+  },
 }
