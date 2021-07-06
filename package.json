@@ -15,7 +15,7 @@
     "@snowind/input": "^0.0.1",
     "@snowind/sidebar": "^0.0.1",
     "@snowind/switch": "^0.0.2",
-    "vue": "^3.0.5"
+    "vue": "^3.1.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
@@ -29,7 +29,7 @@
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/compiler-sfc": "^3.1.1",
     "autoprefixer": "^10.2.6",
     "eslint": "^7.30.0",
     "postcss": "^8.3.5",
@@ -42,6 +42,6 @@
     "vite": "^2.3.8",
     "vite-plugin-eslint": "^1.2.0",
     "vue-loader": "^16.3.0",
-    "vue-tsc": "^0.0.24"
+    "vue-tsc": "^0.2.0"
   }
 }
