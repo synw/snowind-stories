@@ -2,7 +2,7 @@
 
 A starter template for [Snowind](https://github.com/synw/snowind) with a storybook
 
-## Install
+## Install
 
 Clone and install the dependencies:
 
