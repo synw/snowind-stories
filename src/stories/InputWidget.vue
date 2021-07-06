@@ -23,10 +23,7 @@
       >
         Type 3 characters minimum
       </div>
-      <div
-        v-else
-        class="text-neutral dark:text-neutral-dark"
-      >
+      <div v-else class="text-neutral dark:text-neutral-dark">
         Type a username
       </div>
     </div>

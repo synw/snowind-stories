@@ -1,9 +1,6 @@
 <template>
   <div class="m-8">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-    >
+    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Snowind" />
   </div>
 </template>

@@ -3,11 +3,7 @@
     {{ msg }}
   </h1>
 
-  <button
-    type="button"
-    class="btn primary"
-    @click="count++"
-  >
+  <button type="button" class="btn primary" @click="count++">
     count is: {{ count }}
   </button>
 </template>
