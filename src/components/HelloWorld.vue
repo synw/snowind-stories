@@ -1,7 +1,11 @@
 <template>
-  <h1 class="text-red-400">{{ msg }}</h1>
+  <h1 class="text-red-400">
+    {{ msg }}
+  </h1>
 
-  <button type="button" class="btn primary" @click="count++">count is: {{ count }}</button>
+  <button type="button" class="btn primary" @click="count++">
+    count is: {{ count }}
+  </button>
 </template>
 
 <script lang="ts">
@@ -11,13 +15,13 @@ export default defineComponent({
   props: {
     msg: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: () => {
     const count = ref(0)
     return { count }
-  }
+  },
 })
 </script>
 

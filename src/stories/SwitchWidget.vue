@@ -1,48 +1,46 @@
 <template>
-  <sw-switch v-if="hasLabel" :class="css" :label="labelText" v-model:value="model" :big="big"></sw-switch>
+  <sw-switch v-if="hasLabel" v-model:value="model" :class="css" :label="labelText" :big="big"></sw-switch>
   <sw-switch v-else v-model:value="model" :class="css" :big="big"></sw-switch>
 </template>
 
-
 <script lang="ts">
-import { reactive, ref } from 'vue';
-import SwSwitch from '@snowind/switch';
+import { reactive, ref } from 'vue'
+import SwSwitch from '@snowind/switch'
 
 export default {
   components: {
-    SwSwitch
+    SwSwitch,
   },
   props: {
     labelText: {
       type: String,
-      default: "Label"
+      default: 'Label',
     },
     hasLabel: {
       type: Boolean,
-      default: false
+      default: false,
     },
     big: {
       type: Boolean,
-      default: false
+      default: false,
     },
     css: {
       type: String,
-      default: ""
+      default: '',
     },
     checked: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
 
-  // eslint-disable-next-line
   setup(props: any) {
-    props = reactive(props);
-    const model = ref(props.checked);
+    props = reactive(props)
+    const model = ref(props.checked)
 
     return {
-      model
+      model,
     }
   },
-};
+}
 </script>

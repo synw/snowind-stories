@@ -19,6 +19,6 @@ Pharetra vel turpis nunc eget lorem dolor sed viverra. Nullam ac tortor
 vitae purus faucibus ornare suspendisse sed. Pellentesque nec nam aliquam
 sem et tortor consequat id porta. Egestas dui id ornare arcu odio ut.
 Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Aliquam
-ultrices sagittis orci a scelerisque purus semper eget.`;
+ultrices sagittis orci a scelerisque purus semper eget.`
 
-export { textBlock };
+export { textBlock }

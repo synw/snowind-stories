@@ -11,52 +11,56 @@
       required
     ></sw-input>
     <div class="mt-3 text-sm">
-      <div v-if="form.name.isValid === true" class="text-success dark:text-success-dark">Ok</div>
+      <div v-if="form.name.isValid === true" class="text-success dark:text-success-dark">
+        Ok
+      </div>
       <div
         v-else-if="form.name.isValid === false"
         class="text-danger dark:text-danger-dark"
-      >Type 3 characters minimum</div>
-      <div v-else class="text-neutral dark:text-neutral-dark">Type a username</div>
+      >
+        Type 3 characters minimum
+      </div>
+      <div v-else class="text-neutral dark:text-neutral-dark">
+        Type a username
+      </div>
     </div>
   </div>
 </template>
 
-
 <script lang="ts">
-import { reactive } from 'vue';
-import SwInput from "@snowind/input";
-
+import { reactive } from 'vue'
+import SwInput from '@snowind/input'
 
 export default {
   components: {
-    SwInput
+    SwInput,
   },
   props: {
     inlineLabel: {
       type: String,
-      default: ""
+      default: '',
     },
     cssClass: {
       type: String,
-      default: ""
-    }
+      default: '',
+    },
   },
-  // eslint-disable-next-line
+
   setup(props: any) {
-    props = reactive(props);
+    props = reactive(props)
 
     const form = reactive({
       name: {
-        val: "",
+        val: '',
         isValid: null,
-        validator: (v: string) => v.length > 2
-      }
-    });
+        validator: (v: string) => v.length > 2,
+      },
+    })
 
     return {
-      form
+      form,
     }
-  }
+  },
 
-};
+}
 </script>
