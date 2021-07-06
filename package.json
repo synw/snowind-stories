@@ -8,7 +8,8 @@
     "serve": "vite preview",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "buildsb": "build-storybook",
+    "deploysb": "deploy-storybook --existing-output-dir=storybook-static"
   },
   "dependencies": {
     "@snowind/input": "^0.0.1",
