@@ -3,10 +3,11 @@
   "private": true,
   "homepage": "https://synw.github.io/snowind-stories",
   "scripts": {
+    "lint": "eslint --ext .ts,vue --fix --ignore-path .gitignore .",
+    "lint2": "vue-tsc --noEmit",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "serve": "vite preview",
-    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "storybook": "start-storybook -p 6006",
     "buildsb": "build-storybook",
     "deploysb": "storybook-to-ghpages --existing-output-dir=storybook-static --source-branch=main"
