@@ -9,7 +9,7 @@
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "storybook": "start-storybook -p 6006",
     "buildsb": "build-storybook",
-    "deploysb": "deploy-storybook --existing-output-dir=storybook-static"
+    "deploysb": "storybook-to-ghpages --existing-output-dir=storybook-static --source-branch=main"
   },
   "dependencies": {
     "@snowind/input": "^0.0.1",
