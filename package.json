@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://synw.github.io/snowind-stories",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -21,6 +22,7 @@
     "@storybook/addon-actions": "^6.3.2",
     "@storybook/addon-essentials": "^6.3.2",
     "@storybook/addon-links": "^6.3.2",
+    "@storybook/storybook-deployer": "^2.8.10",
     "@storybook/vue3": "^6.3.2",
     "@tailwindcss/forms": "^0.3.3",
     "@types/node": "^16.0.0",
