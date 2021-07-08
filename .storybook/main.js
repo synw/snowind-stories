@@ -11,10 +11,14 @@ module.exports = {
   "core": {
     "builder": "storybook-builder-vite",
   },
-  // overwrite the vite config for base url
-  // when building the storybook for github pages
-  /*async viteFinal(config, { configType }) {
-    config.base = '/snowind-stories/';
+  async viteFinal(config, { configType }) {
+    // overwrite the vite config for base url
+    // when building the storybook for github pages
+    //config.base = '/snowind-stories/';
+    // enable the @ alias
+    config.resolve.alias = [
+      { find: '@/', replacement: '/src/' }
+    ]
     return config;
-  },*/
+  },
 }
