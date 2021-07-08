@@ -1,5 +1,6 @@
-//import { themes } from '@storybook/theming';
+import { themes } from '@storybook/theming';
 import '../src/assets/index.css';
+import snowind from './snowind_theme';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -11,8 +12,11 @@ export const parameters = {
   },
   darkMode: {
     stylePreview: true,
-    classTarget: 'html',
-    darkClass: 'dark',
-    lightClass: 'light'
+    dark: {
+      ...themes.dark,
+      appContentBg: snowind.background.dark,
+      appBg: snowind.background.dark,
+      barBg: snowind.background.dark,
+    },
   }
 }
