@@ -1,5 +1,6 @@
 module.exports = {
-  purge: false, // ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  // purge: false
   // purge is disabled to be able to deploy the storybook on GitHub pages
 
   darkMode: 'class',
