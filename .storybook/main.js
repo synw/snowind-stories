@@ -17,7 +17,8 @@ module.exports = {
     //config.base = '/snowind-stories/';
     // enable the @ alias
     config.resolve.alias = [
-      { find: '@/', replacement: '/src/' }
+      { find: '@/', replacement: '/src/' },
+      { find: 'vue', replacement: 'vue/dist/vue.esm-bundler.js' }
     ]
     return config;
   },
