@@ -1,11 +1,5 @@
 <template>
-  <button
-    :class="classes"
-    :label="label"
-    :disabled="disabled"
-    @click="onClick"
-    v-html="label"
-  />
+  <button :class="classes" :label="label" :disabled="disabled" @click="onClick" v-html="label" />
 </template>
 
 <script lang="ts">
@@ -35,6 +29,7 @@ export default {
 
   emits: ['click'],
 
+  // eslint-disable-next-line
   setup(props: any, { emit }) {
     props = reactive(props)
 

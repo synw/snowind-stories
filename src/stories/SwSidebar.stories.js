@@ -1,5 +1,5 @@
 import '../assets/index.css';
-import SidebarWidget from "./SidebarWidget.vue";
+import SidebarWidget from "./widgets/SidebarWidget.vue";
 import { createTemplate } from './utils';
 
 export default {

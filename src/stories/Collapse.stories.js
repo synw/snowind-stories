@@ -1,5 +1,5 @@
 import '../assets/index.css';
-import CollapseWidget from './CollapseWidget.vue';
+import CollapseWidget from './widgets/CollapseWidget.vue';
 import { createTemplate } from './utils';
 
 export default {

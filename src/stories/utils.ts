@@ -1,3 +1,9 @@
+function createTemplate(txt: string) {
+  let t = `<div class="p-8 bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark">`;
+  t += txt
+  return t + '</div>';
+}
+
 const textBlock = `Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 tortor pretium viverra suspendisse potenti nullam ac. Massa sed elementum
@@ -21,4 +27,4 @@ sem et tortor consequat id porta. Egestas dui id ornare arcu odio ut.
 Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Aliquam
 ultrices sagittis orci a scelerisque purus semper eget.`
 
-export { textBlock }
+export { createTemplate, textBlock }

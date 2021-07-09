@@ -11,24 +11,12 @@
       required
     />
     <div class="mt-3 text-sm">
-      <div
-        v-if="form.name.isValid === true"
-        class="text-success dark:text-success-dark"
-      >
-        Ok
-      </div>
+      <div v-if="form.name.isValid === true" class="text-success dark:text-success-dark">Ok</div>
       <div
         v-else-if="form.name.isValid === false"
         class="text-danger dark:text-danger-dark"
-      >
-        Type 3 characters minimum
-      </div>
-      <div
-        v-else
-        class="text-neutral dark:text-neutral-dark"
-      >
-        Type a username
-      </div>
+      >Type 3 characters minimum</div>
+      <div v-else class="text-neutral dark:text-neutral-dark">Type a username</div>
     </div>
   </div>
 </template>
@@ -52,9 +40,7 @@ export default {
     },
   },
 
-  setup(props: any) {
-    props = reactive(props)
-
+  setup() {
     const form = reactive({
       name: {
         val: '',

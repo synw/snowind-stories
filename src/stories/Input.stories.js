@@ -1,5 +1,5 @@
 import '../assets/index.css';
-import InputWidget from './InputWidget.vue';
+import InputWidget from './widgets/InputWidget.vue';
 import { createTemplate } from './utils';
 
 export default {

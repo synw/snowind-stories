@@ -1,5 +1,5 @@
 import '../assets/index.css';
-import SwitchWidget from "./SwitchWidget.vue";
+import SwitchWidget from "./widgets/SwitchWidget.vue";
 import { createTemplate } from './utils';
 
 export default {

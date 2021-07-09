@@ -1,22 +1,13 @@
 <template>
   <div>
-    <button
-      class="btn"
-      @click="model = !model"
-      v-html="model ? 'Open' : 'Close'"
-    />
-    <div
-      :class="css"
-      class="mt-4"
-    >
-      {{ textBlock }}
-    </div>
+    <button class="btn" @click="model = !model" v-html="model ? 'Open' : 'Close'" />
+    <div :class="css" class="mt-4">{{ textBlock }}</div>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, reactive, ref } from 'vue'
-import { textBlock } from '../const'
+import { textBlock } from '../utils'
 
 export default {
   props: {

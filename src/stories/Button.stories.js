@@ -1,5 +1,5 @@
 import '../assets/index.css';
-import Button from './Button.vue';
+import Button from './widgets/Button.vue';
 import { createTemplate } from './utils';
 
 export default {
