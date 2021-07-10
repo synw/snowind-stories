@@ -1,6 +1,5 @@
 import '../assets/index.css';
 import SidebarWidget from "./widgets/SidebarWidget.vue";
-import { createTemplate } from './utils';
 
 export default {
   title: 'Layout/Sidebar',
@@ -12,9 +11,9 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: createTemplate(`
+  template: `
   <sidebar-widget :cssClass="args.cssClass"></sidebar-widget>
-  `),
+  `,
 });
 
 export const Sidebar = Template.bind({});

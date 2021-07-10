@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts">
-import { reactive, ref } from 'vue'
-import SwSwitch from '@snowind/switch'
+import { reactive, ref } from "vue"
+import SwSwitch from "@snowind/switch"
 
 export default {
   components: {
@@ -25,7 +25,7 @@ export default {
   props: {
     labelText: {
       type: String,
-      default: 'Label',
+      default: "Label",
     },
     hasLabel: {
       type: Boolean,
@@ -37,7 +37,7 @@ export default {
     },
     css: {
       type: String,
-      default: '',
+      default: "",
     },
     checked: {
       type: Boolean,

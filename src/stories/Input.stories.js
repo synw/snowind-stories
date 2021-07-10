@@ -1,20 +1,19 @@
-import '../assets/index.css';
-import InputWidget from './widgets/InputWidget.vue';
-import { createTemplate } from './utils';
+import "../assets/index.css";
+import InputWidget from "./widgets/InputWidget.vue";
 
 export default {
   component: InputWidget,
   title: "Forms/Input",
 };
 
-const Template = (args) => ({
+const Template = args => ({
   components: { InputWidget },
   setup() {
     return { args };
   },
-  template: createTemplate(`
+  template: `
    <InputWidget :inlineLabel="args.inlineLabel" />
-  `),
+  `,
 });
 
 export const Input = Template.bind({});
@@ -23,8 +22,7 @@ Input.argTypes = {
     name: "Inline label",
     type: "string",
     description: "Display the label inline",
-    control: { type: 'text', required: false },
-    defaultValue: ""
-  }
+    control: { type: "text", required: false },
+    defaultValue: "",
+  },
 }
-

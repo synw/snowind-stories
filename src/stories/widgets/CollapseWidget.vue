@@ -1,13 +1,15 @@
 <template>
   <div>
     <button class="btn" @click="model = !model" v-html="model ? 'Open' : 'Close'" />
-    <div :class="css" class="mt-4">{{ textBlock }}</div>
+    <div :class="css" class="mt-4">
+      {{ textBlock }}
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, reactive, ref } from 'vue'
-import { textBlock } from '../utils'
+import { computed, reactive, ref } from "vue"
+import { textBlock } from "../utils"
 
 export default {
   props: {
@@ -17,7 +19,7 @@ export default {
     },
     cssClass: {
       type: String,
-      default: '',
+      default: "",
     },
   },
 
@@ -27,16 +29,16 @@ export default {
     const model = ref(props.isCollapsed)
 
     const css = computed<string>(() => {
-      let c = 'slide-y'
+      let c = "slide-y"
       switch (model.value) {
         case true:
-          c += ' slideup'
+          c += " slideup"
           break
         default:
-          c += ' slidedown'
+          c += " slidedown"
           break
       }
-      if (props.cssClass !== '')
+      if (props.cssClass !== "")
         c += ` ${props.cssClass}`
 
       return c

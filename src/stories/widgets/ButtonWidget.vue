@@ -3,19 +3,19 @@
 </template>
 
 <script lang="ts">
-import { reactive, computed } from 'vue'
+import { reactive, computed } from "vue"
 
 export default {
-  name: 'Button',
+  name: "Button",
 
   props: {
     label: {
       type: String,
-      default: 'Button',
+      default: "Button",
     },
     colorVariant: {
       type: String,
-      default: '',
+      default: "",
     },
     darkVariant: {
       type: Boolean,
@@ -27,7 +27,7 @@ export default {
     },
   },
 
-  emits: ['click'],
+  emits: ["click"],
 
   // eslint-disable-next-line
   setup(props: any, { emit }) {
@@ -36,16 +36,16 @@ export default {
     return {
       classes: computed(() => ({
         btn: true,
-        primary: props.colorVariant === 'primary',
-        secondary: props.colorVariant === 'secondary',
-        neutral: props.colorVariant === 'neutral',
-        light: props.colorVariant === 'light',
-        danger: props.colorVariant === 'danger',
-        warning: props.colorVariant === 'warning',
-        success: props.colorVariant === 'success',
+        primary: props.colorVariant === "primary",
+        secondary: props.colorVariant === "secondary",
+        neutral: props.colorVariant === "neutral",
+        light: props.colorVariant === "light",
+        danger: props.colorVariant === "danger",
+        warning: props.colorVariant === "warning",
+        success: props.colorVariant === "success",
       })),
       onClick() {
-        emit('click')
+        emit("click")
       },
     }
   },
