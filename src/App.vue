@@ -1,15 +1,21 @@
 <template>
-  <div class="m-8">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
+  <div :class="{ 'dark': isDarkMode }">
+    <div
+      class="w-screen h-screen p-5 text-center bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark"
     >
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Snowind" />
+      <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" />
+      <button
+        class="mt-8 btn"
+        v-html="isDarkMode ? 'Light mode' : 'Dark mode'"
+        @click="isDarkMode = !isDarkMode"
+      ></button>
+      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Snowind" class="mt-8" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
@@ -17,5 +23,20 @@ export default defineComponent({
   components: {
     HelloWorld,
   },
+  setup() {
+    const isDarkMode = ref(false);
+
+    return {
+      isDarkMode
+    }
+  }
 })
 </script>
+
+<style lang="css">
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+</style>

@@ -1,15 +1,8 @@
 <template>
-  <h1 class="text-red-400">
-    {{ msg }}
-  </h1>
-
-  <button
-    type="button"
-    class="btn primary"
-    @click="count++"
-  >
-    count is: {{ count }}
-  </button>
+  <div>
+    <h1 class="text-red-400">{{ msg }}</h1>
+    <button class="mt-3 btn primary" @click="count++">count is: {{ count }}</button>
+  </div>
 </template>
 
 <script lang="ts">
