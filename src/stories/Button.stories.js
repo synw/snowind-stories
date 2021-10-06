@@ -39,13 +39,19 @@ const Template2 = args => ({
   },
   template: `
     <div :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
-      <Button :class="'btn '+args.cssClass+' '+args.colorVariant" />
+      <button :class="'btn '+args.cssClass+' '+args.colorVariant" :label="'args.label'" />
     </div>`,
 });
 
 export const Types = Template2.bind({});
 Types.argTypes = {
   ...Overview.argTypes,
+  label: {
+    name: "Label",
+    type: "string",
+    description: "The button label",
+    control: { type: "text", required: false },
+  },
   cssClass: {
     name: "Css classes",
     type: "string",

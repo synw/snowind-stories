@@ -6,8 +6,7 @@
 import { reactive, computed } from "vue"
 
 export default {
-  name: "Button",
-
+  name: "ButtonWidget",
   props: {
     label: {
       type: String,
@@ -29,8 +28,7 @@ export default {
 
   emits: ["click"],
 
-  // eslint-disable-next-line
-  setup(props: any, { emit }) {
+  setup(props: any, { emit }) {// eslint-disable-line
     props = reactive(props)
 
     return {
