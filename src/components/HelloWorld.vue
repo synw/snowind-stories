@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-red-400">{{ msg }}</h1>
+    <h1 class="text-success">{{ msg }}</h1>
     <button class="mt-3 btn primary" @click="count++">count is: {{ count }}</button>
   </div>
 </template>
