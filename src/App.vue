@@ -13,22 +13,18 @@
           <i-fa-solid-sun v-else></i-fa-solid-sun>
         </div>
       </div>
-      <div class="container mx-auto">
-        <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Snowind" class="mt-8" />
+      <div class="container pt-5 mx-auto">
+        <router-view></router-view>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { user } from "@/state";
-import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
-  components: {
-    HelloWorld,
-  },
   setup() {
     return {
       user
