@@ -16,6 +16,7 @@
     "@snowind/input": "^0.0.3",
     "@snowind/sidebar": "^0.0.3",
     "@snowind/switch": "^0.0.3",
+    "@snowind/header": "^0.0.6",
     "@vueuse/core": "^6.5.3",
     "vue": "^3.2.19",
     "vue-router": "4"
