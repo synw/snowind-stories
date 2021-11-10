@@ -13,10 +13,11 @@
     "deploysb": "storybook-to-ghpages --existing-output-dir=storybook-static --source-branch=main"
   },
   "dependencies": {
+    "@snowind/header": "^0.0.7",
     "@snowind/input": "^0.0.3",
     "@snowind/sidebar": "^0.0.3",
+    "@snowind/state": "^0.0.2",
     "@snowind/switch": "^0.0.3",
-    "@snowind/header": "^0.0.6",
     "@vueuse/core": "^6.5.3",
     "vue": "^3.2.19",
     "vue-router": "4"
