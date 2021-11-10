@@ -1,4 +1,4 @@
-import User from "./models/user";
+import { User } from "@snowind/state";
 
 
 const user = new User();
