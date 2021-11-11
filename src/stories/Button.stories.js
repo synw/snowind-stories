@@ -11,6 +11,7 @@ const Template = args => ({
     return { args };
   },
   template: `
+    <div class="text-2xl mb-5">Buttons</div>
     <div class="flex flex-row space-x-3" :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
       <button class="btn" v-bind="args">Default</button>
       <button class="btn primary" v-bind="args">Primary</button>
@@ -23,6 +24,7 @@ const Template = args => ({
     </div>
   `,
 });
+
 export const Overview = Template.bind({});
 Overview.argTypes = {
   size: {
@@ -38,13 +40,16 @@ const Template2 = args => ({
     return { args };
   },
   template: `
+  <div class="text-2xl mb-5">Custom buttons</div>
     <div :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
-      <button :class="'btn '+args.cssClass+' '+args.colorVariant" :label="'args.label'" />
-    </div>`,
+      <button :class="'btn '+args.cssClass+' '+args.colorVariant" v-html="args.label ?? 'Button'" />
+  </div>
+  <div class="mt-5">Use css classes to customize the button</div>  
+  `,
 });
 
-export const Types = Template2.bind({});
-Types.argTypes = {
+export const Custom = Template2.bind({});
+Custom.argTypes = {
   ...Overview.argTypes,
   label: {
     name: "Label",

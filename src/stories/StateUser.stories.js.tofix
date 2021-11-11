@@ -1,0 +1,38 @@
+import "../assets/index.css";
+import { User as SwUser } from "@snowind/state";
+
+export default {
+  title: "State/User",
+};
+
+const Template = (args) => ({
+  setup() {
+    const user = new SwUser();
+
+    return {
+      user,
+    };
+  },
+  template: `
+  <div class="text-2xl mb-5">User preferences</div>
+  <div class="ml-8 space-y-3 border rounded-sm shadow p-3 w-max">
+    <div>
+      <div class="inline-block font-bold mr-2">Dark mode:</div> 
+      <div class="inline-block" v-if="user.isDarkMode.value == true" class="text-success font-bold">yes</div>
+      <div class="inline-block" v-else class="text-danger">no</div>
+    </div>
+    <div>
+      <div class="inline-block font-bold mr-2">Name:</div>
+      <div class="inline-block" class=" font-bold">{{ user.name }}</div>
+    </div>
+    <div>
+      <div class="inline-block font-bold mr-2">Is logged in:</div>
+      <div class="inline-block" v-if="user.isLoggedIn.value == true" class="text-success font-bold">yes</div>
+      <div class="inline-block" v-else class="text-danger">no</div>
+    </div>
+  </div>
+  <div class="mt-8 px-3">Change the size of the preview in the menu bar to see the mobile version</div>
+  `,
+});
+
+export const User = Template.bind({});

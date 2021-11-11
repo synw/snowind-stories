@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row mt-5 h-96">
+  <div class="flex flex-row" style="height: 100vh">
     <sw-sidebar v-model:opened="model" name="sidebar1" class="flex flex-col h-full" :class="css">
       <div class="flex-grow mt-5 ml-6 space-y-6">
         <div>

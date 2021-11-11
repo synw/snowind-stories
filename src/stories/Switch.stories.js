@@ -12,6 +12,7 @@ const Template = args => ({
     return { args };
   },
   template: `
+  <div class="text-2xl mb-5">Switch</div>
   <div class="flex flex-row space-x-8">
     <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block" :checked="true" />&nbsp;Default</div>
     <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block primary" :checked="true" />&nbsp;Primary</div>
@@ -37,12 +38,13 @@ const Template2 = args => ({
     return { args };
   },
   template: `
+  <div class="text-2xl mb-5">Custom switch</div>
   <SwitchWidget :big="args.big" :has-label="args.labelText" :css="'w-max align-middle inline-block '+args.colorVariant" />
   `,
 });
 
-export const Types = Template2.bind({});
-Types.argTypes = {
+export const Custom = Template2.bind({});
+Custom.argTypes = {
   big: {
     name: "Big",
     type: "boolean",

@@ -12,6 +12,7 @@ const Template = args => ({
     return { args };
   },
   template: `
+  <div class="text-2xl mb-5">Collapse</div>
    <CollapseWidget v-bind="args" />
   `,
 });
