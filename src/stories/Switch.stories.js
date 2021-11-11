@@ -12,13 +12,15 @@ const Template = args => ({
     return { args };
   },
   template: `
-  <div class="text-2xl mb-5">Switch</div>
-  <div class="flex flex-row space-x-8">
-    <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block" :checked="true" />&nbsp;Default</div>
-    <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block primary" :checked="true" />&nbsp;Primary</div>
-    <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block secondary" :checked="true" />&nbsp;Secondary</div>
-    <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block warning" :checked="true" />&nbsp;Warning</div>
-    <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block danger" :checked="true" />&nbsp;Danger</div>
+  <div class="p-5">
+    <div class="text-2xl mb-5">Switch</div>
+    <div class="flex flex-row space-x-8">
+      <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block" :checked="true" />&nbsp;Default</div>
+      <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block primary" :checked="true" />&nbsp;Primary</div>
+      <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block secondary" :checked="true" />&nbsp;Secondary</div>
+      <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block warning" :checked="true" />&nbsp;Warning</div>
+      <div><SwitchWidget :big="args.big" css="w-max align-middle inline-block danger" :checked="true" />&nbsp;Danger</div>
+    </div>
   </div>
   `,
 });
@@ -38,8 +40,10 @@ const Template2 = args => ({
     return { args };
   },
   template: `
-  <div class="text-2xl mb-5">Custom switch</div>
-  <SwitchWidget :big="args.big" :has-label="args.labelText" :css="'w-max align-middle inline-block '+args.colorVariant" />
+  <div class="p-5">
+    <div class="text-2xl mb-5">Custom switch</div>
+    <SwitchWidget :big="args.big" :has-label="args.labelText" :css="'w-max align-middle inline-block '+args.colorVariant" />
+  </div>
   `,
 });
 

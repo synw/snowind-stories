@@ -11,6 +11,7 @@ const Template = args => ({
     return { args };
   },
   template: `
+  <div class="p-5">
     <div class="text-2xl mb-5">Buttons</div>
     <div class="flex flex-row space-x-3" :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
       <button class="btn" v-bind="args">Default</button>
@@ -22,6 +23,7 @@ const Template = args => ({
       <button class="btn warning" v-bind="args">Warning</button>
       <button class="btn danger" v-bind="args">Danger</button>
     </div>
+  </div>
   `,
 });
 
@@ -40,11 +42,13 @@ const Template2 = args => ({
     return { args };
   },
   template: `
-  <div class="text-2xl mb-5">Custom buttons</div>
-    <div :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
-      <button :class="'btn '+args.cssClass+' '+args.colorVariant" v-html="args.label ?? 'Button'" />
+  <div class="p-5">
+    <div class="text-2xl mb-5">Custom buttons</div>
+      <div :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
+        <button :class="'btn '+args.cssClass+' '+args.colorVariant" v-html="args.label ?? 'Button'" />
+    </div>
+    <div class="mt-5">Use css classes to customize the button</div>  
   </div>
-  <div class="mt-5">Use css classes to customize the button</div>  
   `,
 });
 

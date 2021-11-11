@@ -12,8 +12,10 @@ const Template = args => ({
     return { args };
   },
   template: `
-  <div class="text-2xl mb-5">Input with validation</div>
-  <InputWidget :inlineLabel="args.inlineLabel" />
+  <div class="p-5">
+    <div class="text-2xl mb-5">Input with validation</div>
+    <InputWidget :inlineLabel="args.inlineLabel" />
+  </div>
   `,
 });
 

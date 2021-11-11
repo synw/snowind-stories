@@ -4,9 +4,6 @@ import HeaderWidget from "./widgets/HeaderWidget.vue";
 export default {
   component: HeaderWidget,
   title: "Layout/Header",
-  parameters: {
-    layout: 'fullscreen'
-  }
 };
 
 const Template = (args) => ({

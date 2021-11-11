@@ -4,9 +4,6 @@ import SidebarWidget from "./widgets/SidebarWidget.vue";
 export default {
   title: 'Layout/Sidebar',
   component: SidebarWidget,
-  parameters: {
-    layout: 'fullscreen'
-  }
 };
 
 const Template = (args) => ({

@@ -11,9 +11,11 @@ const Template = args => ({
     return { args };
   },
   template: `
-  <div class="text-2xl mb-5">Colors</div>
-  <colors-widget />
-  <div class="mt-8 px-3">Change theme to dark mode in the menu bar to see the dark colors</div>
+  <div class="p-5">
+    <div class="text-2xl mb-5">Colors</div>
+    <colors-widget />
+    <div class="mt-8 px-3">Change theme to dark mode in the menu bar to see the dark colors</div>
+  </div>
   `,
 });
 export const Colors = Template.bind({});
