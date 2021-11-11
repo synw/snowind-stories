@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "buildsb": "build-storybook",
-    "deploysb": "storybook-to-ghpages --existing-output-dir=storybook-static --source-branch=main"
+    "deploysb": "storybook-to-ghpages --source-branch=main"
   },
   "dependencies": {
     "@snowind/header": "^0.0.7",
