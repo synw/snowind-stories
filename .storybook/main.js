@@ -14,7 +14,7 @@ module.exports = {
   async viteFinal(config, { configType }) {
     // overwrite the vite config for base url
     // when building the storybook for github pages
-    //config.base = '/snowind-stories/';
+    config.base = '/snowind-stories/';
     // enable the @ alias
     config.resolve.alias = [
       { find: '@/', replacement: '/src/' },
