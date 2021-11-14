@@ -6,7 +6,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    'storybook-dark-mode'
+    'storybook-dark-mode',
   ],
   "core": {
     "builder": "storybook-builder-vite",
@@ -14,7 +14,7 @@ module.exports = {
   async viteFinal(config, { configType }) {
     // overwrite the vite config for base url
     // when building the storybook for github pages
-    config.base = '/snowind-stories/';
+    //config.base = '/snowind-stories/';
     // enable the @ alias
     config.resolve.alias = [
       { find: '@/', replacement: '/src/' },
