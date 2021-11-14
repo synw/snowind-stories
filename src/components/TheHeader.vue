@@ -1,8 +1,5 @@
 <template>
-  <sw-header
-    class="w-full h-16 bg-primary text-primary-r dark:bg-primary-dark dark:text-primary-r-dark"
-    @togglemenu="isMenuVisible = !isMenuVisible"
-  >
+  <sw-header class="w-full h-16 primary" @togglemenu="isMenuVisible = !isMenuVisible">
     <template #mobile-back>
       <i-ion-arrow-back-outline class="inline-flex ml-2 text-3xl" v-if="!isHome"></i-ion-arrow-back-outline>
     </template>
