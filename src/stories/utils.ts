@@ -21,4 +21,14 @@ sem et tortor consequat id porta. Egestas dui id ornare arcu odio ut.
 Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Aliquam
 ultrices sagittis orci a scelerisque purus semper eget.`
 
-export { textBlock }
+function _createTemplate(content: string, noPadding = false) {
+  const p = noPadding ? '' : 'p-5 '
+  let s = `<div style="height:100vh" class="${p} bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark">`;
+  s += content;
+  return s + '</div>'
+}
+
+const createTemplate = (content: string) => _createTemplate(content);
+const createTemplateNoPadding = (content: string) => _createTemplate(content, true);
+
+export { textBlock, createTemplate, createTemplateNoPadding }

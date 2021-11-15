@@ -8,9 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "storybook": "start-storybook -p 6006",
+    "sb": "start-storybook -p 6006",
     "buildsb": "build-storybook",
-    "deploysb": "storybook-to-ghpages --source-branch=main"
+    "deploysb": "storybook-to-ghpages --source-branch=main",
+    "sbprev": "rm -rf storybook-static && rm -rf dist/ && yarn build-storybook && mv storybook-static dist && yarn serve"
   },
   "dependencies": {
     "@snowind/header": "^0.0.7",

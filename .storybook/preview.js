@@ -15,13 +15,6 @@ export const parameters = {
   darkMode: {
     classTarget: 'html',
     stylePreview: true,
-    current: "light",
-    light: {
-      ...themes.normal,
-      brandTitle: "Snowind",
-      brandUrl: 'https://synw.github.io/snowind',
-      brandImage: logo,
-    },
   },
   options: {
     storySort: {

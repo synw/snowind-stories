@@ -1,4 +1,5 @@
 import "../assets/index.css";
+import { createTemplate } from "./utils";
 import InputWidget from "./widgets/InputWidget.vue";
 
 export default {
@@ -11,12 +12,10 @@ const Template = args => ({
   setup() {
     return { args };
   },
-  template: `
-  <div class="p-5">
+  template: createTemplate(`
     <div class="text-2xl mb-5">Input with validation</div>
     <InputWidget :inlineLabel="args.inlineLabel" />
-  </div>
-  `,
+  `),
 });
 
 export const Input = Template.bind({});

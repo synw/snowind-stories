@@ -1,4 +1,5 @@
 import "../assets/index.css";
+import { createTemplate } from "./utils";
 import CollapseWidget from "./widgets/CollapseWidget.vue";
 
 export default {
@@ -11,12 +12,10 @@ const Template = args => ({
   setup() {
     return { args };
   },
-  template: `
-  <div class="p-5">
+  template: createTemplate(`
     <div class="text-2xl mb-5">Collapse</div>
     <CollapseWidget v-bind="args" />
-  </div>
-  `,
+  `),
 });
 
 export const Collapse = Template.bind({});

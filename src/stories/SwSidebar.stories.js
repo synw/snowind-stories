@@ -1,4 +1,5 @@
 import '../assets/index.css';
+import { createTemplateNoPadding } from "./utils";
 import SidebarWidget from "./widgets/SidebarWidget.vue";
 
 export default {
@@ -11,9 +12,9 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `
+  template: createTemplateNoPadding(`
   <sidebar-widget :cssClass="args.cssClass"></sidebar-widget>
-  `,
+  `),
 });
 
 export const Sidebar = Template.bind({});

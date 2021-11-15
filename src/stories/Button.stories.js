@@ -1,4 +1,5 @@
 import "../assets/index.css";
+import { createTemplate } from "./utils";
 import ButtonWidget from "./widgets/ButtonWidget.vue";
 
 export default {
@@ -10,8 +11,7 @@ const Template = args => ({
   setup() {
     return { args };
   },
-  template: `
-  <div class="p-5">
+  template: createTemplate(`
     <div class="text-2xl mb-5">Buttons</div>
     <div class="flex flex-row space-x-3" :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
       <button class="btn" v-bind="args">Default</button>
@@ -23,8 +23,7 @@ const Template = args => ({
       <button class="btn warning" v-bind="args">Warning</button>
       <button class="btn danger" v-bind="args">Danger</button>
     </div>
-  </div>
-  `,
+  `),
 });
 
 export const Overview = Template.bind({});
@@ -41,15 +40,14 @@ const Template2 = args => ({
   setup() {
     return { args };
   },
-  template: `
-  <div class="p-5">
+  template: createTemplate(`
     <div class="text-2xl mb-5">Custom buttons</div>
       <div :class="{'text-xs':args.size === 'xs','text-sm':args.size === 'sm','text-xl':args.size === 'xl'}">
         <button :class="'btn '+args.cssClass+' '+args.colorVariant" v-html="args.label ?? 'Button'" />
     </div>
-    <div class="mt-5">Use css classes to customize the button</div>  
-  </div>
-  `,
+    <div class="mt-5">Use css classes to customize the button: ex: <code>hover:primary dark:hover:primary-dark</code>:</div>  
+    <button class="mt-5 btn hover:primary dark:hover:primary-dark">Hover</button>
+  `),
 });
 
 export const Custom = Template2.bind({});

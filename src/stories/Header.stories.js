@@ -1,4 +1,5 @@
 import "../assets/index.css";
+import { createTemplateNoPadding } from "./utils";
 import HeaderWidget from "./widgets/HeaderWidget.vue";
 
 export default {
@@ -11,11 +12,11 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `
-  <header-widget :branding="args.branding" :mobile-branding="args.mobileBranding ?? 'Mobile branding'"
-    ></header-widget>
-  <div class="mt-5 px-3">Change the size of the preview in the menu bar to see the mobile version</div>
-  `,
+  template: createTemplateNoPadding(`
+    <header-widget :branding="args.branding" :mobile-branding="args.mobileBranding ?? 'Mobile branding'"
+      ></header-widget>
+    <div class="mt-5 px-3">Change the size of the preview in the menu bar to see the mobile version</div>
+  `),
 });
 
 export const Header = Template.bind({});
