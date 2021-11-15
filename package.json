@@ -25,7 +25,7 @@
   "devDependencies": {
     "@iconify/json": "^1.1.373",
     "@iconify/vue": "^3.0.0",
-    "@snowind/plugin": "^0.0.3",
+    "@snowind/plugin": "^0.0.4",
     "@storybook/addon-actions": "^6.3.2",
     "@storybook/addon-essentials": "^6.3.2",
     "@storybook/addon-links": "^6.3.2",
