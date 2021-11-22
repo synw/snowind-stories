@@ -9,11 +9,35 @@ See the Snowind [storybook](https://synw.github.io/snowind-stories/) online
 Clone and install the dependencies:
 
 ```
-yarn install
+yarn
+```
+
+## Run the site
+
+```
+yarn dev
 ```
 
 ## Run the storybook
 
 ```
-yarn storybook
+yarn sb
+```
+
+## Build the site
+
+```
+yarn build
+```
+
+## Build the storybook
+
+```
+yarn buildsb
+```
+
+Build the storybook and preview the result:
+
+```
+yarn sbprev
 ```
