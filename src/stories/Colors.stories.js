@@ -4,9 +4,10 @@ import ColorsWidget from "./widgets/ColorsWidget.vue";
 import ColorTextVariantsWidget from "./widgets/ColorTextVariantsWidget.vue";
 import ColorBlockVariantsWidget from "./widgets/ColorBlockVariantsWidget.vue";
 import ColorHoverVariantsWidget from "./widgets/ColorHoverVariantsWidget.vue";
+import ColorResponsiveVariantsWidget from "./widgets/ColorResponsiveVariantsWidget.vue";
 
 export default {
-  title: "Colors",
+  title: "Colors utilities",
 };
 
 const Template = args => ({
@@ -72,3 +73,43 @@ export const HoverVariants = Template3.bind({});
 HoverVariants.parameters = {
   controls: { hideNoControlsWarning: true },
 };
+
+const Template4 = args => ({
+  components: { ColorResponsiveVariantsWidget },
+  setup() {
+    cssPanelContent.value = null;
+    return { args, cssPanelContent };
+  },
+  template: createTemplateWithPanel(`
+    <div class="text-2xl mb-5">Responsive variants</div>
+    <color-responsive-variants-widget />
+  `),
+
+});
+export const ResponsiveVariants = Template4.bind({});
+ResponsiveVariants.parameters = {
+  controls: { hideNoControlsWarning: true },
+  viewport: {
+    defaultViewport: 'iphone5',
+  },
+};
+
+const Template5 = args => ({
+  setup() {
+    return { args };
+  },
+  template: createTemplate(`
+    <div class="text-2xl mb-5">Custom color block</div>
+    <div :class="args.cssClass" class="p-3">Lorem ipsum</div>
+  `),
+});
+export const Customize = Template5.bind({});
+Customize.argTypes = {
+  cssClass: {
+    name: "Css classes",
+    type: "string",
+    description: "Apply css classes to the button. Ex: hover:text-red-500 dark:hover:text-secondary",
+    defaultValue: "primary hover:success dark:hover:danger-dark",
+    control: { type: "text" },
+  },
+}

@@ -3,7 +3,6 @@ import { createTemplate } from "./utils";
 import ButtonWidget from "./widgets/ButtonWidget.vue";
 
 export default {
-  component: ButtonWidget,
   title: "Widgets/Buttons",
 };
 
@@ -25,7 +24,6 @@ const Template = args => ({
     </div>
   `),
 });
-
 export const Overview = Template.bind({});
 Overview.argTypes = {
   size: {
@@ -49,7 +47,6 @@ const Template2 = args => ({
     <button class="mt-5 btn hover:primary dark:hover:primary-dark">Hover</button>
   `),
 });
-
 export const Custom = Template2.bind({});
 Custom.argTypes = {
   ...Overview.argTypes,
