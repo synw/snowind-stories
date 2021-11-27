@@ -1,3 +1,5 @@
+import { ref } from "vue-demi";
+
 const textBlock = `Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 tortor pretium viverra suspendisse potenti nullam ac. Massa sed elementum
@@ -21,14 +23,23 @@ sem et tortor consequat id porta. Egestas dui id ornare arcu odio ut.
 Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Aliquam
 ultrices sagittis orci a scelerisque purus semper eget.`
 
-function _createTemplate(content: string, noPadding = false) {
+const cssPanelContent = ref<string | null>(null);
+
+function _createTemplate(content: string, noPadding = false, panel = false) {
   const p = noPadding ? '' : 'p-5 '
-  let s = `<div style="height:100vh" class="${p} bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark">`;
-  s += content;
-  return s + '</div>'
+  let s = `<div style="height:100vh " class="background">`;
+  s += '<div class="flex flex-col h-full">';
+  s += `<div class="flex-grow ${p}">${content}</div>`;
+  if (panel) {
+    s += `<div class="p-3 light">
+    <code>{{ cssPanelContent ?? "Move the mouse over components to see the html" }}</code>
+    </div>`;
+  }
+  return s + '</div></div>'
 }
 
 const createTemplate = (content: string) => _createTemplate(content);
+const createTemplateWithPanel = (content: string) => _createTemplate(content, false, true);
 const createTemplateNoPadding = (content: string) => _createTemplate(content, true);
 
-export { textBlock, createTemplate, createTemplateNoPadding }
+export { textBlock, createTemplate, createTemplateNoPadding, createTemplateWithPanel, cssPanelContent }
