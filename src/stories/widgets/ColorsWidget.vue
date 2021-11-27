@@ -60,5 +60,5 @@ export default {
 
 <style lang="sass" scoped>
 .color-block
-  @apply w-16 rounded-md text-center p-3
+  @apply w-16 rounded-md text-center p-3 cursor-help
 </style>

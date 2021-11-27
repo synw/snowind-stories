@@ -12,7 +12,10 @@
       class="sm:background sm:dark:background-dark neutral"
       @mouseenter="onHover('neutral')"
     >neutral mobile only</div>
-    <div class="sm:background sm:dark:background-dark light" @mouseenter="onHover('light')">light</div>
+    <div
+      class="sm:background sm:dark:background-dark light"
+      @mouseenter="onHover('light')"
+    >light mobile only</div>
     <div
       class="sm:background sm:dark:background-dark success"
       @mouseenter="onHover('success')"
@@ -21,7 +24,10 @@
       class="sm:background sm:dark:background-dark warning"
       @mouseenter="onHover('warning')"
     >warning mobile only</div>
-    <div class="sm:background sm:dark:background-dark danger" @mouseenter="onHover('danger')">danger</div>
+    <div
+      class="sm:background sm:dark:background-dark danger"
+      @mouseenter="onHover('danger')"
+    >danger mobile only</div>
     <div
       class="sm:background sm:dark:background-dark background"
       @mouseenter="onHover('background')"
@@ -52,5 +58,5 @@ export default {
 <style lang="sass" scoped>
 div
   & div
-    @apply p-2 rounded
+    @apply p-2 rounded cursor-help
 </style>

@@ -51,5 +51,5 @@ export default {
 <style lang="sass" scoped>
 div
   & div
-    @apply p-2 rounded
+    @apply p-2 rounded cursor-help
 </style>

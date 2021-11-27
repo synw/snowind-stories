@@ -29,3 +29,9 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" scoped>
+div
+  & div
+    @apply cursor-help
+</style>
