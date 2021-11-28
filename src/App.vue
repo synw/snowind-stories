@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'dark': user.isDarkMode.value }">
-    <div class="bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark">
+    <div class="background">
       <the-header></the-header>
       <div class="p-5 sm:container sm:pt-5 sm:p-0 sm:mx-auto">
         <router-view></router-view>

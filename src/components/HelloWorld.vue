@@ -1,14 +1,21 @@
 <template>
   <div>
     <h1 class="text-success">{{ msg }}</h1>
-    <button class="mt-3 btn primary" @click="count++">count is: {{ count }}</button>
+    <button class="mt-3 btn primary" @click="count++; popToast()">count is: {{ count }}</button>
+    <sw-toast :show="isToastVisible" class="secondary">
+      <div>Change: {{ count }}</div>
+    </sw-toast>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue';
+import { SwToast, useToast } from '@snowind/toast';
+
 export default defineComponent({
-  name: 'HelloWorld',
+  components: {
+    SwToast,
+  },
   props: {
     msg: {
       type: String,
@@ -16,8 +23,14 @@ export default defineComponent({
     },
   },
   setup: () => {
-    const count = ref(0)
-    return { count }
+    const count = ref(0);
+    const { isToastVisible, popToast } = useToast();
+
+    return {
+      count,
+      isToastVisible,
+      popToast,
+    }
   },
 })
 </script>
