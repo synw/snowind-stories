@@ -12,6 +12,13 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
+    path: "/settings",
+    component: () => import("./views/SettingsView.vue"),
+    meta: {
+      title: "Settings"
+    }
+  },
+  {
     path: "/page",
     component: () => import("./views/PageView.vue"),
     meta: {

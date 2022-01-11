@@ -13,27 +13,27 @@
       </div>
     </template>
     <template #branding>
-      <div class="flex flex-row items-center h-full" @click="$router.push('/')">
+      <div class="flex flex-row items-center h-full cursor-pointer" @click="$router.push('/')">
         <img alt="Snowind logo" src="@/assets/logo.png" class="inline-block mx-3" />
         <span class="text-lg">Snowind Stories</span>
       </div>
     </template>
     <template #menu>
-      <div class="flex flex-row items-center justify-end h-full space-x-1">
+      <div class="flex flex-row items-center justify-end w-full h-full space-x-1">
         <button class="border-none btn" @click="$router.push('/page')">Page 1</button>
-        <div class="px-5 text-lg cursor-pointer" @click="user.toggleDarkMode()">
-          <i-fa-solid-moon v-if="user.isDarkMode"></i-fa-solid-moon>
-          <i-fa-solid-sun v-else></i-fa-solid-sun>
+        <div class="px-5 text-lg cursor-pointer" @click="$router.push('/settings')">
+          <i-fluent-settings-32-regular class="text-light dark:text-light-dark"></i-fluent-settings-32-regular>
         </div>
       </div>
     </template>
   </sw-header>
-  <sw-mobile-menu
-    :is-visible="isMenuVisible"
-    class="bg-neutral text-neutral-r dark:bg-neutral-dark dark:text-neutral-r-dark"
-  >
+  <sw-mobile-menu :is-visible="isMenuVisible">
     <div class="flex flex-col p-3 space-y-5">
       <router-link to="/page" @click="closeMenu()">Page 1</router-link>
+      <router-link to="/settings" @click="closeMenu()">
+        <i-clarity-settings-line class="inline-block"></i-clarity-settings-line>
+        <span>&nbsp;&nbsp;Options</span>
+      </router-link>
     </div>
   </sw-mobile-menu>
 </template>
