@@ -1,17 +1,17 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  purge: {
-    content: [
-      './index.html',
-      './src/**/*.{vue,js,ts,jsx,tsx}',
-      './node_modules/@snowind/**/*.{vue,js,ts}',
-    ],
-  },
+  content: [
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+    './node_modules/@snowind/**/*.{vue,js,ts}',
+  ],
   // for storybook builds
   //purge: false,
   darkMode: 'class',
-  jit: true,
   plugins: [
     require('@tailwindcss/forms'),
     require('@snowind/plugin'),
   ],
+  theme: { extend: { colors: { green: colors.emerald, yellow: colors.amber, purple: colors.violet, } }, },
 }
