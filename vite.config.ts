@@ -26,7 +26,7 @@ export default defineConfig({
     }),
   ],
   // for storybook builds to github pages
-  //base: process.env.NODE_ENV === 'production' ? '/snowind-stories/' : './',
+  base: process.env.NODE_ENV === 'production' ? '/snowind-stories/' : './',
   resolve: {
     alias: [
       { find: '@/', replacement: '/src/' }
