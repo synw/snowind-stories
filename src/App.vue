@@ -1,35 +1,19 @@
 <template>
-  <div :class="{ 'dark': user.isDarkMode.value }">
-    <div class="background">
-      <the-header></the-header>
-      <div class="p-5 sm:container sm:pt-5 sm:p-0 sm:mx-auto">
-        <router-view></router-view>
-      </div>
+  <div :class="{ dark: user.isDarkMode.value == true }">
+    <the-header></the-header>
+    <div class="p-3">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import TheHeader from "@/components/TheHeader.vue";
 import { user } from "@/state";
-import TheHeader from './components/TheHeader.vue';
-
-export default defineComponent({
-  components: {
-    TheHeader,
-  },
-  setup() {
-    return {
-      user
-    }
-  }
-})
 </script>
 
-<style lang="css">
-html,
+<style>
 body {
   margin: 0;
-  padding: 0;
 }
 </style>

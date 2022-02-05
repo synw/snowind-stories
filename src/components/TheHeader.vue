@@ -15,7 +15,7 @@
     <template #branding>
       <div class="flex flex-row items-center h-full cursor-pointer" @click="$router.push('/')">
         <img alt="Snowind logo" src="@/assets/logo.png" class="inline-block mx-3" />
-        <span class="text-lg">Snowind Stories</span>
+        <span class="text-lg">Snowind</span>
       </div>
     </template>
     <template #menu>

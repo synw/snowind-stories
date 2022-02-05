@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
 import HomeView from "./views/HomeView.vue"
 
-const baseTitle = "Snowind Stories"
+const baseTitle = "Snowind"
 
 const routes: Array<RouteRecordRaw> = [
   {

@@ -1,7 +1,7 @@
-import { themes } from "@storybook/theming"
+//import { themes } from "@storybook/theming"
 import '../src/assets/index.css';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import logo from "@/assets/logo.png"
+//import logo from "@/assets/logo.png"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

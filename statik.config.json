@@ -1,8 +1,0 @@
-{
-  "root": "dist",
-  "watch": {
-    "src": [
-      "yarn build"
-    ]
-  }
-}

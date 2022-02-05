@@ -12,22 +12,10 @@ Clone and install the dependencies:
 yarn
 ```
 
-## Run the site
-
-```
-yarn dev
-```
-
 ## Run the storybook
 
 ```
 yarn sb
-```
-
-## Build the site
-
-```
-yarn build
 ```
 
 ## Build the storybook
